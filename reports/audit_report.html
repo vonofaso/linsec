@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+    <html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <title>LinSec Audit Report — Московский Политех</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #f0f0f0;
+            color: #222;
+            min-height: 100vh;
+        }
+        .header {
+            background: #fff;
+            border-bottom: 3px solid #000;
+            padding: 24px 40px;
+            display: flex;
+            align-items: center;
+            gap: 36px;
+        }
+        .header img {
+            height: 72px;
+        }
+        .header .title-block {
+            flex: 1;
+        }
+        .header h1 {
+            font-size: 26px;
+            font-weight: 700;
+            color: #000;
+            margin: 0;
+        }
+        .header .subtitle {
+            font-size: 15px;
+            color: #555;
+            margin-top: 6px;
+        }
+        .header .author {
+            text-align: right;
+            font-size: 15px;
+            color: #333;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 36px 48px;
+        }
+        .info-bar {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            padding: 18px 24px;
+            margin-bottom: 28px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 16px;
+            color: #444;
+        }
+        .info-bar .stat {
+            font-weight: 600;
+        }
+        .info-bar .stat.ok { color: #2e7d32; }
+        .info-bar .stat.issues { color: #c62828; }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            background: #fff;
+            border-radius: 6px;
+            overflow: hidden;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+        }
+        th {
+            background: #1a1a1a;
+            color: #fff;
+            padding: 14px 16px;
+            text-align: left;
+            font-size: 15px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        td {
+            padding: 12px 16px;
+            border-bottom: 1px solid #e0e0e0;
+            font-size: 15px;
+        }
+        tr:last-child td {
+            border-bottom: none;
+        }
+        .OK { background: #e8f5e9; }
+        .LOW { background: #e8eaf6; }
+        .MEDIUM { background: #fff8e1; }
+        .HIGH { background: #fbe9e7; }
+        .CRITICAL { background: #ffebee; }
+        .footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 13px;
+            color: #999;
+            margin-top: 30px;
+        }
+    </style>
+    </head>
+    <body>
+
+    <div class="header">
+        <img src="mospoly-logo.svg" alt="Московский Политех" onerror="this.style.display='none'">
+        <div class="title-block">
+            <h1>LinSec — Linux Security Auditor</h1>
+            <div class="subtitle">Курсовая работа &bull; Безопасность операционных систем Linux &bull; 2026</div>
+        </div>
+        <div class="author">
+            <strong>Сафонов А.О.</strong><br>
+            Группа 241-352<br>
+            Московский Политех
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="info-bar">
+            <span>Сформирован: <strong>05.05.2026, 18:53:10</strong></span>
+            <span>Всего проверок: <strong>78</strong></span>
+            <span class="stat ok">ОК: <strong>39</strong></span>
+            <span class="stat issues">Проблем: <strong>39</strong></span>
+        </div>
+
+        <table>
+            <tr><th>Severity</th><th>Module</th><th>CIS</th><th>ФСТЭК</th><th>Message</th></tr>
+            <tr class='OK'><td>OK</td><td>SSH</td><td>5.1.20</td><td>2.1.2</td><td>PermitRootLogin = no</td></tr>
+<tr class='OK'><td>OK</td><td>SSH</td><td>5.1.19</td><td>—</td><td>PermitEmptyPasswords = no</td></tr>
+<tr class='OK'><td>OK</td><td>SSH</td><td>5.1.16</td><td>—</td><td>MaxAuthTries = 4 (≤ 4)</td></tr>
+<tr class='LOW'><td>LOW</td><td>SSH</td><td>5.1.11</td><td>—</td><td>IgnoreRhosts не задан (рекомендуется yes)</td></tr>
+<tr class='MEDIUM'><td>MEDIUM</td><td>SSH</td><td>5.1.10</td><td>—</td><td>HostbasedAuthentication не задан (рекомендуется no)</td></tr>
+<tr class='LOW'><td>LOW</td><td>SSH</td><td>5.1.21</td><td>—</td><td>PermitUserEnvironment не задан (рекомендуется no)</td></tr>
+<tr class='LOW'><td>LOW</td><td>SSH</td><td>5.1.7</td><td>—</td><td>ClientAliveInterval не задан или = 0</td></tr>
+<tr class='LOW'><td>LOW</td><td>SSH</td><td>5.1.7</td><td>—</td><td>ClientAliveCountMax не задан (рекомендуется ≤ 3)</td></tr>
+<tr class='LOW'><td>LOW</td><td>SSH</td><td>5.1.5</td><td>—</td><td>Баннер не настроен</td></tr>
+<tr class='OK'><td>OK</td><td>Users</td><td>5.4.2.1</td><td>—</td><td>UID 0 есть только у root</td></tr>
+<tr class='OK'><td>OK</td><td>Users</td><td>7.2.2</td><td>2.1.1</td><td>Пустые пароли отсутствуют</td></tr>
+<tr class='LOW'><td>LOW</td><td>Users</td><td>—</td><td>—</td><td>Заблокировано учёток: 49</td></tr>
+<tr class='MEDIUM'><td>MEDIUM</td><td>Users</td><td>5.4.3.2</td><td>—</td><td>TMOUT не задан (сессии не закрываются)</td></tr>
+<tr class='HIGH'><td>HIGH</td><td>Users</td><td>5.3.3.1.1</td><td>—</td><td>Блокировка после неудачных попыток НЕ настроена</td></tr>
+<tr class='OK'><td>OK</td><td>Users</td><td>5.3.3.2.2</td><td>—</td><td>Минимальная длина пароля: 14 (≥14)</td></tr>
+<tr class='OK'><td>OK</td><td>Users</td><td>5.2.7</td><td>2.2.1</td><td>su ограничен группой wheel</td></tr>
+<tr class='MEDIUM'><td>MEDIUM</td><td>Users</td><td>5.4.1.1</td><td>—</td><td>Максимальный срок пароля: 99999 дней (рекомендуется ≤ 90)</td></tr>
+<tr class='LOW'><td>LOW</td><td>Users</td><td>5.4.1.2</td><td>—</td><td>Минимальный срок до смены пароля: 0 (рекомендуется ≥ 1)</td></tr>
+<tr class='OK'><td>OK</td><td>Users</td><td>7.2.5</td><td>—</td><td>UID пользователей уникальны</td></tr>
+<tr class='OK'><td>OK</td><td>Users</td><td>—</td><td>2.2.2</td><td>NOPASSWD в sudoers не обнаружен</td></tr>
+<tr class='MEDIUM'><td>MEDIUM</td><td>Users</td><td>—</td><td>2.3.11</td><td>Домашние директории с доступом для группы/других: 1</td></tr>
+<tr class='MEDIUM'><td>MEDIUM</td><td>Users</td><td>—</td><td>2.3.10</td><td>Файлов в домашних директориях с доступом группы/других: 5</td></tr>
+<tr class='OK'><td>OK</td><td>Files</td><td>7.1.11</td><td>—</td><td>Sticky-бит на /tmp установлен</td></tr>
+<tr class='OK'><td>OK</td><td>Files</td><td>1.4.1</td><td>—</td><td>Пароль на GRUB установлен</td></tr>
+<tr class='MEDIUM'><td>MEDIUM</td><td>Files</td><td>1.1.1.9</td><td>—</td><td>Модуль usb-storage не заблокирован (USB-накопители разрешены)</td></tr>
+<tr class='OK'><td>OK</td><td>Files</td><td>1.3.1.1</td><td>—</td><td>AppArmor активен</td></tr>
+<tr class='OK'><td>OK</td><td>Files</td><td>—</td><td>—</td><td>Telnet: пакет не установлен</td></tr>
+<tr class='OK'><td>OK</td><td>Files</td><td>2.1.6</td><td>—</td><td>FTP: пакет не установлен</td></tr>
+<tr class='OK'><td>OK</td><td>Files</td><td>2.1.14</td><td>—</td><td>Samba (SMB): пакет не установлен</td></tr>
+<tr class='OK'><td>OK</td><td>Files</td><td>2.1.9</td><td>—</td><td>NFS: пакет не установлен</td></tr>
+<tr class='OK'><td>OK</td><td>Files</td><td>2.1.13</td><td>—</td><td>rsync демон отключён (пакет есть, служба остановлена)</td></tr>
+<tr class='OK'><td>OK</td><td>Files</td><td>2.1.10</td><td>—</td><td>NIS: пакет не установлен</td></tr>
+<tr class='OK'><td>OK</td><td>Files</td><td>2.2.2</td><td>—</td><td>rsh: пакет не установлен</td></tr>
+<tr class='OK'><td>OK</td><td>Files</td><td>7.2.1</td><td>—</td><td>Теневые пароли используются (shadow)</td></tr>
+<tr class='OK'><td>OK</td><td>Files</td><td>7.1.11</td><td>—</td><td>Нет world-writable файлов</td></tr>
+<tr class='MEDIUM'><td>MEDIUM</td><td>Files</td><td>2.1.11</td><td>—</td><td>CUPS активен (рекомендуется отключить на сервере)</td></tr>
+<tr class='OK'><td>OK</td><td>Files</td><td>—</td><td>2.3.4</td><td>Права на sudo-файлы корректны</td></tr>
+<tr class='MEDIUM'><td>MEDIUM</td><td>Files</td><td>—</td><td>2.3.5</td><td>Стартовых скриптов с доступом на запись другим: 16</td></tr>
+<tr class='OK'><td>OK</td><td>Files</td><td>—</td><td>2.3.7</td><td>Права на пользовательские cron корректны</td></tr>
+<tr class='OK'><td>OK</td><td>Files</td><td>—</td><td>2.3.8</td><td>Права на файлы в /bin, /usr/bin, /lib корректны</td></tr>
+<tr class='LOW'><td>LOW</td><td>SUID</td><td>7.1.13</td><td>2.3.9</td><td>Всего SUID/SGID-файлов: 25</td></tr>
+<tr class='OK'><td>OK</td><td>SUID</td><td>7.1.13</td><td>—</td><td>Подозрительных SUID-файлов не найдено</td></tr>
+<tr class='LOW'><td>LOW</td><td>Network</td><td>2.1.22</td><td>—</td><td>Слушающих TCP-портов: 0</td></tr>
+<tr class='OK'><td>OK</td><td>Network</td><td>3.3.1</td><td>—</td><td>IP forwarding выключен</td></tr>
+<tr class='MEDIUM'><td>MEDIUM</td><td>Network</td><td>3.3.5</td><td>—</td><td>ICMP-редиректы включены (текущее: 1)</td></tr>
+<tr class='OK'><td>OK</td><td>Network</td><td>3.3.8</td><td>—</td><td>Source routed packets не принимаются</td></tr>
+<tr class='OK'><td>OK</td><td>Network</td><td>3.3.4</td><td>—</td><td>ICMP broadcast игнорируются</td></tr>
+<tr class='OK'><td>OK</td><td>Network</td><td>3.3.3</td><td>—</td><td>Bogus ICMP фильтруются</td></tr>
+<tr class='MEDIUM'><td>MEDIUM</td><td>Network</td><td>3.3.7</td><td>—</td><td>Reverse Path Filtering выключен (текущее: 2)</td></tr>
+<tr class='OK'><td>OK</td><td>Network</td><td>3.3.10</td><td>—</td><td>TCP SYN Cookies включены</td></tr>
+<tr class='MEDIUM'><td>MEDIUM</td><td>Network</td><td>3.3.11</td><td>—</td><td>IPv6 RA принимаются (текущее: 1)</td></tr>
+<tr class='OK'><td>OK</td><td>Network</td><td>—</td><td>2.4.1</td><td>dmesg ограничен</td></tr>
+<tr class='LOW'><td>LOW</td><td>Network</td><td>—</td><td>2.4.2</td><td>Указатели ядра доступны (текущее: 1)</td></tr>
+<tr class='MEDIUM'><td>MEDIUM</td><td>Network</td><td>—</td><td>2.5.2</td><td>События производительности доступны (текущее: 4)</td></tr>
+<tr class='MEDIUM'><td>MEDIUM</td><td>Network</td><td>—</td><td>2.5.4</td><td>kexec_load разрешён (текущее: 0)</td></tr>
+<tr class='LOW'><td>LOW</td><td>Network</td><td>—</td><td>2.5.5</td><td>User namespaces не запрещены (текущее: 13142)</td></tr>
+<tr class='MEDIUM'><td>MEDIUM</td><td>Network</td><td>—</td><td>2.5.6</td><td>BPF для непривилегированных не запрещён (текущее: 2)</td></tr>
+<tr class='OK'><td>OK</td><td>Network</td><td>—</td><td>2.5.7</td><td>userfaultfd для непривилегированных запрещён</td></tr>
+<tr class='LOW'><td>LOW</td><td>Network</td><td>—</td><td>2.5.8</td><td>ldisc_autoload включён (текущее: 1)</td></tr>
+<tr class='OK'><td>OK</td><td>Network</td><td>—</td><td>2.5.10</td><td>mmap_min_addr >= 4096</td></tr>
+<tr class='MEDIUM'><td>MEDIUM</td><td>Network</td><td>—</td><td>2.4.8</td><td>bpf_jit_harden не включён (текущее: 0)</td></tr>
+<tr class='OK'><td>OK</td><td>Network</td><td>—</td><td>2.6.2</td><td>Защита symlink включена</td></tr>
+<tr class='OK'><td>OK</td><td>Network</td><td>—</td><td>2.6.3</td><td>Защита hardlink включена</td></tr>
+<tr class='MEDIUM'><td>MEDIUM</td><td>Network</td><td>—</td><td>2.6.4</td><td>Защита FIFO ослаблена (текущее: 1)</td></tr>
+<tr class='OK'><td>OK</td><td>Network</td><td>—</td><td>2.6.5</td><td>Защита regular файлов включена</td></tr>
+<tr class='MEDIUM'><td>MEDIUM</td><td>Network</td><td>1.5.3</td><td>2.6.6</td><td>SUID-дампы разрешены (текущее: 2)</td></tr>
+<tr class='MEDIUM'><td>MEDIUM</td><td>Network</td><td>1.5.2</td><td>2.6.1</td><td>ptrace_scope не равен 3 (рекомендация ФСТЭК) (текущее: 1)</td></tr>
+<tr class='OK'><td>OK</td><td>Network</td><td>1.5.1</td><td>2.5.11</td><td>ASLR включён</td></tr>
+<tr class='OK'><td>OK</td><td>Network</td><td>3.1.3</td><td>—</td><td>Bluetooth отключён</td></tr>
+<tr class='OK'><td>OK</td><td>Network</td><td>4.2.3</td><td>—</td><td>UFW активен</td></tr>
+<tr class='LOW'><td>LOW</td><td>Network</td><td>—</td><td>2.4.3</td><td>init_on_alloc не установлен в cmdline</td></tr>
+<tr class='LOW'><td>LOW</td><td>Network</td><td>—</td><td>2.4.4</td><td>slab_nomerge не установлен в cmdline</td></tr>
+<tr class='LOW'><td>LOW</td><td>Network</td><td>—</td><td>2.4.6</td><td>randomize_kstack_offset=1 не установлен</td></tr>
+<tr class='LOW'><td>LOW</td><td>Network</td><td>—</td><td>2.4.7</td><td>mitigations не настроены</td></tr>
+<tr class='LOW'><td>LOW</td><td>Network</td><td>—</td><td>2.5.1</td><td>vsyscall не none</td></tr>
+<tr class='LOW'><td>LOW</td><td>Network</td><td>—</td><td>2.5.3</td><td>debugfs монтируется</td></tr>
+<tr class='LOW'><td>LOW</td><td>Network</td><td>—</td><td>2.5.9</td><td>tsx не отключён</td></tr>
+<tr class='LOW'><td>LOW</td><td>Network</td><td>—</td><td>2.4.5</td><td>IOMMU не настроен (отсутствуют: iommu=force, iommu.strict=1, iommu.passthrough=0)</td></tr>
+
+        </table>
+    </div>
+
+    </body>
+    </html>

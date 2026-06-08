@@ -1,0 +1,553 @@
+{
+  "tool": "LinSec",
+  "timestamp": "2026-05-05T18:53:10.574832",
+  "total": 78,
+  "findings": [
+    {
+      "severity": "OK",
+      "module": "SSH",
+      "cis": "5.1.20",
+      "fstec": "2.1.2",
+      "message": "PermitRootLogin = no"
+    },
+    {
+      "severity": "OK",
+      "module": "SSH",
+      "cis": "5.1.19",
+      "fstec": "—",
+      "message": "PermitEmptyPasswords = no"
+    },
+    {
+      "severity": "OK",
+      "module": "SSH",
+      "cis": "5.1.16",
+      "fstec": "—",
+      "message": "MaxAuthTries = 4 (≤ 4)"
+    },
+    {
+      "severity": "LOW",
+      "module": "SSH",
+      "cis": "5.1.11",
+      "fstec": "—",
+      "message": "IgnoreRhosts не задан (рекомендуется yes)"
+    },
+    {
+      "severity": "MEDIUM",
+      "module": "SSH",
+      "cis": "5.1.10",
+      "fstec": "—",
+      "message": "HostbasedAuthentication не задан (рекомендуется no)"
+    },
+    {
+      "severity": "LOW",
+      "module": "SSH",
+      "cis": "5.1.21",
+      "fstec": "—",
+      "message": "PermitUserEnvironment не задан (рекомендуется no)"
+    },
+    {
+      "severity": "LOW",
+      "module": "SSH",
+      "cis": "5.1.7",
+      "fstec": "—",
+      "message": "ClientAliveInterval не задан или = 0"
+    },
+    {
+      "severity": "LOW",
+      "module": "SSH",
+      "cis": "5.1.7",
+      "fstec": "—",
+      "message": "ClientAliveCountMax не задан (рекомендуется ≤ 3)"
+    },
+    {
+      "severity": "LOW",
+      "module": "SSH",
+      "cis": "5.1.5",
+      "fstec": "—",
+      "message": "Баннер не настроен"
+    },
+    {
+      "severity": "OK",
+      "module": "Users",
+      "cis": "5.4.2.1",
+      "fstec": "—",
+      "message": "UID 0 есть только у root"
+    },
+    {
+      "severity": "OK",
+      "module": "Users",
+      "cis": "7.2.2",
+      "fstec": "2.1.1",
+      "message": "Пустые пароли отсутствуют"
+    },
+    {
+      "severity": "LOW",
+      "module": "Users",
+      "cis": "—",
+      "fstec": "—",
+      "message": "Заблокировано учёток: 49"
+    },
+    {
+      "severity": "MEDIUM",
+      "module": "Users",
+      "cis": "5.4.3.2",
+      "fstec": "—",
+      "message": "TMOUT не задан (сессии не закрываются)"
+    },
+    {
+      "severity": "HIGH",
+      "module": "Users",
+      "cis": "5.3.3.1.1",
+      "fstec": "—",
+      "message": "Блокировка после неудачных попыток НЕ настроена"
+    },
+    {
+      "severity": "OK",
+      "module": "Users",
+      "cis": "5.3.3.2.2",
+      "fstec": "—",
+      "message": "Минимальная длина пароля: 14 (≥14)"
+    },
+    {
+      "severity": "OK",
+      "module": "Users",
+      "cis": "5.2.7",
+      "fstec": "2.2.1",
+      "message": "su ограничен группой wheel"
+    },
+    {
+      "severity": "MEDIUM",
+      "module": "Users",
+      "cis": "5.4.1.1",
+      "fstec": "—",
+      "message": "Максимальный срок пароля: 99999 дней (рекомендуется ≤ 90)"
+    },
+    {
+      "severity": "LOW",
+      "module": "Users",
+      "cis": "5.4.1.2",
+      "fstec": "—",
+      "message": "Минимальный срок до смены пароля: 0 (рекомендуется ≥ 1)"
+    },
+    {
+      "severity": "OK",
+      "module": "Users",
+      "cis": "7.2.5",
+      "fstec": "—",
+      "message": "UID пользователей уникальны"
+    },
+    {
+      "severity": "OK",
+      "module": "Users",
+      "cis": "—",
+      "fstec": "2.2.2",
+      "message": "NOPASSWD в sudoers не обнаружен"
+    },
+    {
+      "severity": "MEDIUM",
+      "module": "Users",
+      "cis": "—",
+      "fstec": "2.3.11",
+      "message": "Домашние директории с доступом для группы/других: 1"
+    },
+    {
+      "severity": "MEDIUM",
+      "module": "Users",
+      "cis": "—",
+      "fstec": "2.3.10",
+      "message": "Файлов в домашних директориях с доступом группы/других: 5"
+    },
+    {
+      "severity": "OK",
+      "module": "Files",
+      "cis": "7.1.11",
+      "fstec": "—",
+      "message": "Sticky-бит на /tmp установлен"
+    },
+    {
+      "severity": "OK",
+      "module": "Files",
+      "cis": "1.4.1",
+      "fstec": "—",
+      "message": "Пароль на GRUB установлен"
+    },
+    {
+      "severity": "MEDIUM",
+      "module": "Files",
+      "cis": "1.1.1.9",
+      "fstec": "—",
+      "message": "Модуль usb-storage не заблокирован (USB-накопители разрешены)"
+    },
+    {
+      "severity": "OK",
+      "module": "Files",
+      "cis": "1.3.1.1",
+      "fstec": "—",
+      "message": "AppArmor активен"
+    },
+    {
+      "severity": "OK",
+      "module": "Files",
+      "cis": "—",
+      "fstec": "—",
+      "message": "Telnet: пакет не установлен"
+    },
+    {
+      "severity": "OK",
+      "module": "Files",
+      "cis": "2.1.6",
+      "fstec": "—",
+      "message": "FTP: пакет не установлен"
+    },
+    {
+      "severity": "OK",
+      "module": "Files",
+      "cis": "2.1.14",
+      "fstec": "—",
+      "message": "Samba (SMB): пакет не установлен"
+    },
+    {
+      "severity": "OK",
+      "module": "Files",
+      "cis": "2.1.9",
+      "fstec": "—",
+      "message": "NFS: пакет не установлен"
+    },
+    {
+      "severity": "OK",
+      "module": "Files",
+      "cis": "2.1.13",
+      "fstec": "—",
+      "message": "rsync демон отключён (пакет есть, служба остановлена)"
+    },
+    {
+      "severity": "OK",
+      "module": "Files",
+      "cis": "2.1.10",
+      "fstec": "—",
+      "message": "NIS: пакет не установлен"
+    },
+    {
+      "severity": "OK",
+      "module": "Files",
+      "cis": "2.2.2",
+      "fstec": "—",
+      "message": "rsh: пакет не установлен"
+    },
+    {
+      "severity": "OK",
+      "module": "Files",
+      "cis": "7.2.1",
+      "fstec": "—",
+      "message": "Теневые пароли используются (shadow)"
+    },
+    {
+      "severity": "OK",
+      "module": "Files",
+      "cis": "7.1.11",
+      "fstec": "—",
+      "message": "Нет world-writable файлов"
+    },
+    {
+      "severity": "MEDIUM",
+      "module": "Files",
+      "cis": "2.1.11",
+      "fstec": "—",
+      "message": "CUPS активен (рекомендуется отключить на сервере)"
+    },
+    {
+      "severity": "OK",
+      "module": "Files",
+      "cis": "—",
+      "fstec": "2.3.4",
+      "message": "Права на sudo-файлы корректны"
+    },
+    {
+      "severity": "MEDIUM",
+      "module": "Files",
+      "cis": "—",
+      "fstec": "2.3.5",
+      "message": "Стартовых скриптов с доступом на запись другим: 16"
+    },
+    {
+      "severity": "OK",
+      "module": "Files",
+      "cis": "—",
+      "fstec": "2.3.7",
+      "message": "Права на пользовательские cron корректны"
+    },
+    {
+      "severity": "OK",
+      "module": "Files",
+      "cis": "—",
+      "fstec": "2.3.8",
+      "message": "Права на файлы в /bin, /usr/bin, /lib корректны"
+    },
+    {
+      "severity": "LOW",
+      "module": "SUID",
+      "cis": "7.1.13",
+      "fstec": "2.3.9",
+      "message": "Всего SUID/SGID-файлов: 25"
+    },
+    {
+      "severity": "OK",
+      "module": "SUID",
+      "cis": "7.1.13",
+      "fstec": "—",
+      "message": "Подозрительных SUID-файлов не найдено"
+    },
+    {
+      "severity": "LOW",
+      "module": "Network",
+      "cis": "2.1.22",
+      "fstec": "—",
+      "message": "Слушающих TCP-портов: 0"
+    },
+    {
+      "severity": "OK",
+      "module": "Network",
+      "cis": "3.3.1",
+      "fstec": "—",
+      "message": "IP forwarding выключен"
+    },
+    {
+      "severity": "MEDIUM",
+      "module": "Network",
+      "cis": "3.3.5",
+      "fstec": "—",
+      "message": "ICMP-редиректы включены (текущее: 1)"
+    },
+    {
+      "severity": "OK",
+      "module": "Network",
+      "cis": "3.3.8",
+      "fstec": "—",
+      "message": "Source routed packets не принимаются"
+    },
+    {
+      "severity": "OK",
+      "module": "Network",
+      "cis": "3.3.4",
+      "fstec": "—",
+      "message": "ICMP broadcast игнорируются"
+    },
+    {
+      "severity": "OK",
+      "module": "Network",
+      "cis": "3.3.3",
+      "fstec": "—",
+      "message": "Bogus ICMP фильтруются"
+    },
+    {
+      "severity": "MEDIUM",
+      "module": "Network",
+      "cis": "3.3.7",
+      "fstec": "—",
+      "message": "Reverse Path Filtering выключен (текущее: 2)"
+    },
+    {
+      "severity": "OK",
+      "module": "Network",
+      "cis": "3.3.10",
+      "fstec": "—",
+      "message": "TCP SYN Cookies включены"
+    },
+    {
+      "severity": "MEDIUM",
+      "module": "Network",
+      "cis": "3.3.11",
+      "fstec": "—",
+      "message": "IPv6 RA принимаются (текущее: 1)"
+    },
+    {
+      "severity": "OK",
+      "module": "Network",
+      "cis": "—",
+      "fstec": "2.4.1",
+      "message": "dmesg ограничен"
+    },
+    {
+      "severity": "LOW",
+      "module": "Network",
+      "cis": "—",
+      "fstec": "2.4.2",
+      "message": "Указатели ядра доступны (текущее: 1)"
+    },
+    {
+      "severity": "MEDIUM",
+      "module": "Network",
+      "cis": "—",
+      "fstec": "2.5.2",
+      "message": "События производительности доступны (текущее: 4)"
+    },
+    {
+      "severity": "MEDIUM",
+      "module": "Network",
+      "cis": "—",
+      "fstec": "2.5.4",
+      "message": "kexec_load разрешён (текущее: 0)"
+    },
+    {
+      "severity": "LOW",
+      "module": "Network",
+      "cis": "—",
+      "fstec": "2.5.5",
+      "message": "User namespaces не запрещены (текущее: 13142)"
+    },
+    {
+      "severity": "MEDIUM",
+      "module": "Network",
+      "cis": "—",
+      "fstec": "2.5.6",
+      "message": "BPF для непривилегированных не запрещён (текущее: 2)"
+    },
+    {
+      "severity": "OK",
+      "module": "Network",
+      "cis": "—",
+      "fstec": "2.5.7",
+      "message": "userfaultfd для непривилегированных запрещён"
+    },
+    {
+      "severity": "LOW",
+      "module": "Network",
+      "cis": "—",
+      "fstec": "2.5.8",
+      "message": "ldisc_autoload включён (текущее: 1)"
+    },
+    {
+      "severity": "OK",
+      "module": "Network",
+      "cis": "—",
+      "fstec": "2.5.10",
+      "message": "mmap_min_addr >= 4096"
+    },
+    {
+      "severity": "MEDIUM",
+      "module": "Network",
+      "cis": "—",
+      "fstec": "2.4.8",
+      "message": "bpf_jit_harden не включён (текущее: 0)"
+    },
+    {
+      "severity": "OK",
+      "module": "Network",
+      "cis": "—",
+      "fstec": "2.6.2",
+      "message": "Защита symlink включена"
+    },
+    {
+      "severity": "OK",
+      "module": "Network",
+      "cis": "—",
+      "fstec": "2.6.3",
+      "message": "Защита hardlink включена"
+    },
+    {
+      "severity": "MEDIUM",
+      "module": "Network",
+      "cis": "—",
+      "fstec": "2.6.4",
+      "message": "Защита FIFO ослаблена (текущее: 1)"
+    },
+    {
+      "severity": "OK",
+      "module": "Network",
+      "cis": "—",
+      "fstec": "2.6.5",
+      "message": "Защита regular файлов включена"
+    },
+    {
+      "severity": "MEDIUM",
+      "module": "Network",
+      "cis": "1.5.3",
+      "fstec": "2.6.6",
+      "message": "SUID-дампы разрешены (текущее: 2)"
+    },
+    {
+      "severity": "MEDIUM",
+      "module": "Network",
+      "cis": "1.5.2",
+      "fstec": "2.6.1",
+      "message": "ptrace_scope не равен 3 (рекомендация ФСТЭК) (текущее: 1)"
+    },
+    {
+      "severity": "OK",
+      "module": "Network",
+      "cis": "1.5.1",
+      "fstec": "2.5.11",
+      "message": "ASLR включён"
+    },
+    {
+      "severity": "OK",
+      "module": "Network",
+      "cis": "3.1.3",
+      "fstec": "—",
+      "message": "Bluetooth отключён"
+    },
+    {
+      "severity": "OK",
+      "module": "Network",
+      "cis": "4.2.3",
+      "fstec": "—",
+      "message": "UFW активен"
+    },
+    {
+      "severity": "LOW",
+      "module": "Network",
+      "cis": "—",
+      "fstec": "2.4.3",
+      "message": "init_on_alloc не установлен в cmdline"
+    },
+    {
+      "severity": "LOW",
+      "module": "Network",
+      "cis": "—",
+      "fstec": "2.4.4",
+      "message": "slab_nomerge не установлен в cmdline"
+    },
+    {
+      "severity": "LOW",
+      "module": "Network",
+      "cis": "—",
+      "fstec": "2.4.6",
+      "message": "randomize_kstack_offset=1 не установлен"
+    },
+    {
+      "severity": "LOW",
+      "module": "Network",
+      "cis": "—",
+      "fstec": "2.4.7",
+      "message": "mitigations не настроены"
+    },
+    {
+      "severity": "LOW",
+      "module": "Network",
+      "cis": "—",
+      "fstec": "2.5.1",
+      "message": "vsyscall не none"
+    },
+    {
+      "severity": "LOW",
+      "module": "Network",
+      "cis": "—",
+      "fstec": "2.5.3",
+      "message": "debugfs монтируется"
+    },
+    {
+      "severity": "LOW",
+      "module": "Network",
+      "cis": "—",
+      "fstec": "2.5.9",
+      "message": "tsx не отключён"
+    },
+    {
+      "severity": "LOW",
+      "module": "Network",
+      "cis": "—",
+      "fstec": "2.4.5",
+      "message": "IOMMU не настроен (отсутствуют: iommu=force, iommu.strict=1, iommu.passthrough=0)"
+    }
+  ]
+}
